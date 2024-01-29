@@ -1,5 +1,7 @@
 # Emvs2024
 
+![example workflow](https://github.com/emvs-2024/docs/actions/workflows/build-and-deploy.yml/badge.svg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 ## Development server
