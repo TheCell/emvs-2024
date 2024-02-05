@@ -1,12 +1,7 @@
-<app-example-a (titleClicked)="toggleComponent()" [customName]="'super'"></app-example-a>
-<app-example-a (titleClicked)="bbqTitleClicked()" [customName]="'bbq'"></app-example-a>
-<app-example-a *ngIf="showComponent" [customName]="abc"><p>dynamic</p></app-example-a>
-<app-example-a><p>paragraph</p></app-example-a>
-<app-example-a></app-example-a>
-<app-example-b></app-example-b>
+<nav>
+  <a routerLink="/" routerLinkActive="active">home</a>
+  <a routerLink="/student-a" routerLinkActive="active">student-a</a>
+</nav>
 
-<app-student-github-page [url]="'https://janbbodenmann.github.io/BOJA_Angular1'"></app-student-github-page>
-<app-student-github-page [url]="'http://mariob06.github.io/angular_project'"></app-student-github-page>
-<app-student-github-page [url]="'https://eizval.github.io/angular/'"></app-student-github-page>
-<app-student-github-page [url]="'https://dariokempf.github.io/angular-projekt/'"></app-student-github-page>
-<app-student-github-page [url]="'https://luanasani.github.io/AsLu_Angular'"></app-student-github-page>
+<router-outlet></router-outlet>
+
