@@ -1,5 +1,6 @@
-<app-example-a [customName]="'super'"></app-example-a>
-<app-example-a [customName]="'bbq'"></app-example-a>
+<app-example-a (titleClicked)="toggleComponent()" [customName]="'super'"></app-example-a>
+<app-example-a (titleClicked)="bbqTitleClicked()" [customName]="'bbq'"></app-example-a>
+<app-example-a *ngIf="showComponent" [customName]="abc"><p>dynamic</p></app-example-a>
 <app-example-a><p>paragraph</p></app-example-a>
 <app-example-a></app-example-a>
 <app-example-b></app-example-b>

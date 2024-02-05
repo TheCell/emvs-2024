@@ -1,5 +1,15 @@
 <div>
-  <h1>Example A</h1>
+  <h1>{{ myvar }}</h1>
+  <!-- <span *ngIf="myvar > 3">Greater than 3</span> -->
+  <!-- <p *ngFor="let i of myArr">
+    array entry nr: {{ i }}
+    <span>test {{i}}</span>
+  </p>
+  <p>
+    @if (myvar > 2) { Welcome back, user! }
+  </p> -->
+
+  <h1 (click)="titleClicked.next()">Example A</h1>
   <p>Example A works!</p>
   <p>My input is: {{ customName }}</p>
   <ng-content></ng-content>

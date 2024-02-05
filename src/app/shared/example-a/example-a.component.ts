@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-example-a',
@@ -7,9 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ExampleAComponent implements OnInit {
   @Input() public customName = '';
-  public title = 'Example A';
+  @Output() public titleClicked = new EventEmitter<void>();
 
-  constructor() { }
+  public title = 'Example A';
+  public myvar = 1;
+  public myArr = [1, 2, 3, 4, 5];
+
+  constructor() {
+    // setInterval(() => {
+    //   this.myvar = Math.random() * 5;
+    //   console.log('myvar', this.myvar);
+    // }, 1000);
+  }
 
   ngOnInit() {
   }
