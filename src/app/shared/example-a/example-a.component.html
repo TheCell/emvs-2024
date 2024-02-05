@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <h1>{{ myvar }}</h1>
   <!-- <span *ngIf="myvar > 3">Greater than 3</span> -->
   <!-- <p *ngFor="let i of myArr">
@@ -8,6 +8,13 @@
   <p>
     @if (myvar > 2) { Welcome back, user! }
   </p> -->
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+
+  <div class="row">
+    test
+  </div>
 
   <h1 (click)="titleClicked.next()">Example A</h1>
   <p>Example A works!</p>
