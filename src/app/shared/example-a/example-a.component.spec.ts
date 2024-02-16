@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ExampleAComponent } from './example-a.component';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('ExampleAComponent', () => {
   let component: ExampleAComponent;
@@ -11,7 +12,8 @@ describe('ExampleAComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExampleAComponent ]
+      declarations: [ ExampleAComponent ],
+      imports: [NgbAlertModule]
     })
     .compileComponents();
   }));
