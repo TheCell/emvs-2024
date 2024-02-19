@@ -5,6 +5,8 @@ timepicker:
 datepicker:
 <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" />
 
+<a [routerLink]="['student-a']">Link to student a</a>
+
 <app-example-a (titleClicked)="toggleComponent()" [customName]="'super'"></app-example-a>
 <app-example-a (titleClicked)="bbqTitleClicked()" [customName]="'bbq'"></app-example-a>
 <app-example-a *ngIf="showComponent" [customName]="abc"><p>dynamic</p></app-example-a>

@@ -3,13 +3,14 @@ import { SharedModule } from '../shared/shared.module';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { NgbCalendar, NgbDateStruct, NgbDatepicker, NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-components-introduction',
   templateUrl: './components-introduction.component.html',
   styleUrls: ['./components-introduction.component.css'],
   standalone: true,
-  imports: [CommonModule, SharedModule, NgbDatepickerModule, FormsModule, JsonPipe]
+  imports: [CommonModule, SharedModule, NgbDatepickerModule, FormsModule, JsonPipe, RouterLink]
 })
 export class ComponentsIntroductionComponent implements OnInit {
   public abc = '';
