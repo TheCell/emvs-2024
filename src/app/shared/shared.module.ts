@@ -5,6 +5,7 @@ import { ExampleBComponent } from './example-b/example-b.component';
 import { ExampleCComponent } from './example-c/example-c.component';
 import { StudentGithubPageComponent } from './student-github-page/student-github-page.component';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThemeTogglerComponent } from './theme-toggler/theme-toggler.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
-    StudentGithubPageComponent
+    StudentGithubPageComponent,
+    ThemeTogglerComponent
   ],
   exports: [
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
-    StudentGithubPageComponent
+    StudentGithubPageComponent,
+    ThemeTogglerComponent
   ]
 })
 export class SharedModule { }
