@@ -3,12 +3,18 @@ import { StudentGithubPageComponent } from './shared/student-github-page/student
 import { ExampleAComponent } from './shared/example-a/example-a.component';
 import { AppComponent } from './app.component';
 import { ComponentsIntroductionComponent } from './components-introduction/components-introduction.component';
+import { HomeComponent } from './home/home.component';
+import { StudentListComponent } from './student-list/student-list.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: ComponentsIntroductionComponent
+    component: HomeComponent
+  },
+  {
+    path: 'students',
+    component: StudentListComponent
   },
   {
     path: 'student-a',
