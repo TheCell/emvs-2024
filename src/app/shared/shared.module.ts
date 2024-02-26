@@ -6,25 +6,31 @@ import { ExampleCComponent } from './example-c/example-c.component';
 import { StudentGithubPageComponent } from './student-github-page/student-github-page.component';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeTogglerComponent } from './theme-toggler/theme-toggler.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbAlertModule
+    NgbAlertModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
     StudentGithubPageComponent,
-    ThemeTogglerComponent
+    ThemeTogglerComponent,
+    ContactFormComponent
   ],
   exports: [
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
     StudentGithubPageComponent,
-    ThemeTogglerComponent
+    ThemeTogglerComponent,
+    ContactFormComponent
   ]
 })
 export class SharedModule { }
