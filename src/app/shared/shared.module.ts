@@ -8,6 +8,7 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeTogglerComponent } from './theme-toggler/theme-toggler.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StudentPageComponent } from './student-page/student-page.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExampleCComponent,
     StudentGithubPageComponent,
     ThemeTogglerComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    StudentPageComponent
   ],
   exports: [
     ExampleAComponent,
@@ -30,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExampleCComponent,
     StudentGithubPageComponent,
     ThemeTogglerComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    StudentPageComponent
   ]
 })
 export class SharedModule { }

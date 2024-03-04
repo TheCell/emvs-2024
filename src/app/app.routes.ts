@@ -6,6 +6,9 @@ import { ComponentsIntroductionComponent } from './components-introduction/compo
 import { HomeComponent } from './home/home.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { AboutComponent } from './about/about.component';
+import { StudentPageComponent } from './shared/student-page/student-page.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   {
@@ -15,11 +18,17 @@ export const routes: Routes = [
   },
   {
     path: 'students',
-    component: StudentListComponent
-  },
-  {
-    path: 'student-a',
-    component: ExampleAComponent,
+    component: StudentListComponent,
+    children: [
+      {
+        path: ':studentName',
+        component: StudentPageComponent
+      },
+      {
+        path: '**',
+        component: NotFoundComponent
+      }
+    ]
   },
   {
     path: 'about',
@@ -30,8 +39,11 @@ export const routes: Routes = [
     component: ComponentsIntroductionComponent
   },
   {
-    path: '',
-    redirectTo: 'student-a',
-    pathMatch: 'full'
+    path: 'login',
+    component: LoginComponent
   },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
