@@ -1,22 +1,24 @@
-<p>
-  login works!
-</p>
+<p>loginService isLoggedIn: {{ loginService.isLoggedIn }}</p>
 
-loginService isLoggedIn: {{ loginService.isLoggedIn }}
-
-<div>
-
-</div>
-<div class="container">
-  <form [formGroup]="loginForm" (ngSubmit)="save()">
-    <div class="form-group col-6">
-      <input formControlName="username" class="form-control" type="text" />
+  <form [formGroup]="loginForm" (ngSubmit)="save()" *ngIf="!loginService.isLoggedIn">
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="username">Username</label>
+        <input formControlName="username" id="username" class="form-control" type="text" />
+        <small id="username-help" class="form-text text-muted">This is a dummy, use guest</small>
+      </div>
     </div>
-    <div class="form-group col-6">
-      <input formControlName="password" class="form-control" type="password" />
+
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="password">password</label>
+        <input formControlName="password" class="form-control" type="password" />
+        <small id="password-help" class="form-text text-muted">This is a dummy, use guest</small>
+      </div>
     </div>
-    <button type="submit">Login</button>
+
+    <button *ngIf="!loginService.isLoggedIn" type="submit" class="btn btn-primary">Login</button>
   </form>
-</div>
 
-<button (click)="loginService.setIsLoggedIn(false)">Logout</button>
+  <button *ngIf="loginService.isLoggedIn" (click)="loginService.setIsLoggedIn(false)" class="btn btn-primary">Logout</button>
+
