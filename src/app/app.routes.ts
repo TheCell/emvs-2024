@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { StudentPageComponent } from './shared/student-page/student-page.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
+import { ProductsListComponent } from './products-list/products-list.component';
 
 export const routes: Routes = [
   {
@@ -41,6 +42,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'example-api-call',
+    component: ProductsListComponent
   },
   {
     path: '**',
