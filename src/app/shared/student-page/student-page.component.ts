@@ -1,20 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-student-page',
   templateUrl: './student-page.component.html',
   styleUrls: ['./student-page.component.css']
 })
-export class StudentPageComponent implements OnInit {
+export class StudentPageComponent {
   @Input() public url: string = '';
+  @Input() public description: string = '';
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    // this.url = this.activatedRoute.snapshot.params['url'];
-    // console.log(this.url);
-  }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

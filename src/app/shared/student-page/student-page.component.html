@@ -1,1 +1,6 @@
-<a href="{{ url }}" target="_blank">{{ url }}</a>
+<div [id]="url" class="list-group-item-check pe-none">
+</div>
+<label [for]="url">
+  <a href="{{ url }}" target="_blank">{{ url }}</a>
+  <span class="d-block small opacity-50">{{ description }}</span>
+</label>
